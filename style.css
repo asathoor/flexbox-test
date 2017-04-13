@@ -47,12 +47,13 @@ header, footer {
   #wrap {
     flex: 0 1 100%;
     font-size: large; } }
-@media (min-width: 700px) {
+@media (min-width: 850px) {
   #wrap {
-    display: flex;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: 250px; } }
+    display: flex; }
+    #wrap main {
+      flex: 2; }
+    #wrap aside {
+      flex: 1; } }
 /**
  * Fonts
  **/
