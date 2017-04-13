@@ -51,7 +51,7 @@ header, footer {
   #wrap {
     display: flex; }
     #wrap main {
-      flex: 2; }
+      flex: 3; }
     #wrap aside {
       flex: 1; } }
 /**
