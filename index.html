@@ -6,7 +6,6 @@
 	
 	<!-- local stylesheet generated via SASS -->	
 	<link href="style.css" type="text/css" rel="stylesheet">
-
 </head>
 <body>
 	
@@ -92,6 +91,19 @@
 			&copy; Per Thykjær Jensen - footer
 		</footer>
 
+	<!-- Modernizr -->
+	<script src="js/modernizr.js"></script>
+	<script>
+		/* Is Flexbox an option? */
+		if (Modernizr.flexbox) {
+			// supported
+			console.log('Flexbox is supported.');
+			}
+			else {
+				// not-supported
+				alert('You\'ll have to get a more recent browser in order to view this page.');
+			}	
+	</script>
 	
 </body>
 </html>

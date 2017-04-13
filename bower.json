@@ -18,6 +18,7 @@
     "tests"
   ],
   "dependencies": {
-    "meyer-reset": "bower-meyer-reset#*"
+    "meyer-reset": "bower-meyer-reset#*",
+    "modernizr": "^3.3.1"
   }
 }
