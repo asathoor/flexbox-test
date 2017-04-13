@@ -12,14 +12,14 @@
 	
 
 		<header>
-			<h1>I'm the header</h1>
-			<h2>Description</h2>
+			<h1>Flexbox Layout</h1>
+			<h2>Easy, and well supported</h2>
 		</header>
 	
 		<div id="wrap">
 			
 			<aside>
-				Aside one
+				<h3>Aside one</h3>
 				
 				<!-- start slipsum code -->
 				
@@ -61,10 +61,10 @@
 			</main>
 			
 			<aside>
-				Aside Two
+				<h3>Aside Two</h3>
 				
 				<ul>
-					<li> Item </li>
+					<li> <a href="ul.html">ul.html</a> </li>
 					<li> Item </li>
 					<li> Item </li>
 					<li> Item </li>
@@ -94,17 +94,7 @@
 
 	<!-- Modernizr -->
 	<script src="js/modernizr.js"></script>
-	<script>
-		/* Is Flexbox an option? */
-		if (Modernizr.flexbox) {
-			// supported
-			console.log('Flexbox is supported.');
-			}
-			else {
-				// not-supported
-				alert('You\'ll have to get a more recent browser in order to view this page.');
-			}	
-	</script>
+	<script src="js/q-modernizr-flexbox-support.js"></script>
 	
 </body>
 </html>

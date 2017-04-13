@@ -45,15 +45,19 @@ header, footer {
 @media (min-width: 850px){
 
 	#wrap {
+		
+		// ( container )
 		display: flex;
 		
-		main {
-			flex: 3;		
-		}
+			// ( items )
+			main {
+				flex: 3;		
+			}
+			
+			aside {
+				flex: 1;		
+			}
 		
-		aside {
-			flex: 1;		
-		}
 	}
 }
 
@@ -75,6 +79,14 @@ header, footer {
 	font-weight: bolder;
 	text-align: center;
 	font-size: large;
+	
+	a {
+		color: #fff;	
+	}
+	
+	a:hover {
+		color: yellow;	
+	}
 }
 
 h1, h2 {
@@ -86,3 +98,32 @@ h3, h4, h5 {
 	font-size: 1.4rem;
 	margin-bottom: $padding;
 }
+
+	/* ul flex ( container ) */
+	ul {
+		// ( container )
+		display: flex;
+		list-style-type: none;
+		background-color: purple;
+		align-items: stretch;
+		align-content: flex-start;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		flex-direction: row;
+		
+			// ( items )
+			li {
+				background-color: pink;
+				width: 133px;
+				height: auto;
+				flex: 0 1 auto;
+				text-align: center;
+				
+						
+			}
+			
+			li:hover {
+				background: yellow;
+				}
+
+	}
