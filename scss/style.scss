@@ -1,0 +1,77 @@
+// file: style.scss
+// purpose: try out flexbox
+// more: @url https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+$padding: 1.345rem;
+
+/**
+ * Meyer Reset
+ **/
+@import '../bower_components/meyer-reset/_meyer-reset.scss';
+
+
+/**
+ * HeadFoot
+ **/
+header, footer {
+	color: #fff;
+	background: purple;
+}
+
+
+/**
+ * Flexbox
+ **/
+
+// mobile devices
+@media (max-width: 320px) {
+
+	// the children will inherit this:
+	#wrap {
+		flex: 0 1 100%;
+		font-size: large;
+	}
+
+} // max-width 699
+
+ 
+// tablets and up
+@media (min-width: 700px){
+
+	#wrap {
+		display: flex;
+		flex-grow: 0;
+		flex-shrink: 1;
+		flex-basis: 250px;
+	}
+}
+
+
+/**
+ * Fonts
+ **/
+body {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 1.12rem;
+	}
+
+article, aside {
+	padding: $padding;
+}
+
+header, footer {
+	padding: $padding + 2rem;
+	font-weight: bolder;
+	text-align: center;
+	font-size: large;
+}
+
+h1, h2 {
+	font-size: 2.3rem;
+}
+
+h3, h4, h5 {
+	margin-top: $padding;
+	font-size: 1.4rem;
+	margin-bottom: $padding;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "flexbox",
+  "description": "try out flexbox",
+  "main": "index.js",
+  "authors": [
+    "Per Thykjaer Jensen"
+  ],
+  "license": "GPL-3.0",
+  "keywords": [
+    "flexbox"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "flexbox": "*",
+    "meyer-reset": "bower-meyer-reset#*"
+  }
+}
