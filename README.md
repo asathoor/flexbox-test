@@ -1,6 +1,6 @@
 # Flexbox-test
 
-Read the article about Flexbox in *Web Designer (issue: 259)*. Had to try out Flexbox.
+Work in progress notes on Flexbox. The markup is inspired by the article about Flexbox in *Web Designer (issue: 259)*.  
 
 ## Install
 
