@@ -15,8 +15,6 @@
   display: flex;         // NEW, Spec - Firefox, Chrome, Opera
 }
 
-//$theWidth: 20%; // set to something appropriate 
-
 @mixin item-prefix( $theWidth ) {
   -webkit-box-flex: 1;   // OLD - iOS 6-, Safari 3.1-6
   width: $theWidth;      // For old syntax, otherwise collapses.
@@ -36,12 +34,6 @@ $padding: 1.345rem;
  * Meyer Reset
  **/
 @import '../bower_components/meyer-reset/_meyer-reset.scss';
-
-
-/**
- * Prefixes
- * see @url: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
- **/
 
 
 /**
@@ -116,7 +108,7 @@ h3, h4, h5 {
 			}
 			
 			li:hover {
-				background: yellow;
+				background: purple;
 				}
 
 	}
