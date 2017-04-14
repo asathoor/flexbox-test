@@ -97,7 +97,7 @@ h3, h4, h5 {
 		
 			// ( items )
 			li {
-				@include item-prefix( '50px' );
+				@include item-prefix( '100px' );
 				background-color: pink;
 				width: 133px;
 				height: auto;
@@ -109,6 +109,12 @@ h3, h4, h5 {
 			
 			li:hover {
 				background: purple;
+				color: #fff;
+				}
+				
+			li a:hover {
+				background: purple;
+				color: #fff;
 				}
 
 	}
