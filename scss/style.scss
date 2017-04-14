@@ -2,7 +2,35 @@
 // purpose: try out flexbox
 // more: @url https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
+/**
+ * PREFIXES
+ * @URL: http://shouldiprefix.com/#flexbox
+ *
+ *  --> Mixins
+ **/
+@mixin container-prefix() {
+  display: -webkit-box;  // OLD - iOS 6-, Safari 3.1-6, BB7
+  display: -ms-flexbox;  // TWEENER - IE 10
+  display: -webkit-flex; // NEW - Safari 6.1+. iOS 7.1+, BB10
+  display: flex;         // NEW, Spec - Firefox, Chrome, Opera
+}
+
+//$theWidth: 20%; // set to something appropriate 
+
+@mixin item-prefix( $theWidth ) {
+  -webkit-box-flex: 1;   // OLD - iOS 6-, Safari 3.1-6
+  width: $theWidth;      // For old syntax, otherwise collapses.
+  -webkit-flex: 1;       // Safari 6.1+. iOS 7.1+, BB10
+  -ms-flex: 1;           // IE 10
+  flex: 1;               // NEW, Spec - Firefox, Chrome, Opera
+}
+
+
+/**
+ * Variables
+ **/
 $padding: 1.345rem;
+
 
 /**
  * Meyer Reset
@@ -22,43 +50,6 @@ $padding: 1.345rem;
 header, footer {
 	color: #fff;
 	background: purple;
-}
-
-
-/**
- * Flexbox
- **/
-
-// mobile devices
-@media (max-width: 320px) {
-
-	// the children will inherit this:
-	#wrap {
-		flex: 0 1 100%;
-		font-size: large;
-	}
-
-} // max-width 699
-
- 
-// tablets and up
-@media (min-width: 850px){
-
-	#wrap {
-		
-		// ( container )
-		display: flex;
-		
-			// ( items )
-			main {
-				flex: 3;		
-			}
-			
-			aside {
-				flex: 1;		
-			}
-		
-	}
 }
 
 
@@ -101,8 +92,9 @@ h3, h4, h5 {
 
 	/* ul flex ( container ) */
 	ul {
-		// ( container )
-		display: flex;
+					
+		@include container-prefix;		
+		
 		list-style-type: none;
 		background-color: purple;
 		align-items: stretch;
@@ -113,6 +105,7 @@ h3, h4, h5 {
 		
 			// ( items )
 			li {
+				@include item-prefix( '50px' );
 				background-color: pink;
 				width: 133px;
 				height: auto;
@@ -127,3 +120,44 @@ h3, h4, h5 {
 				}
 
 	}
+
+
+/**
+ * Flexbox Media Queries
+ **/
+
+// mobile devices
+@media (max-width: 400px) {
+
+	// the children will inherit this:
+	#wrap {
+				
+		@include container-prefix;
+		
+		flex: 0 1 100%; // shorthand
+		font-size: large;
+		
+	}
+
+} // max-width 699
+
+ 
+// tablets and up
+@media (min-width: 850px){
+
+	#wrap {
+						
+		@include container-prefix;
+		
+			article {
+				flex: 2;		
+			}
+			
+			aside {
+				flex: 1;		
+			}
+		
+	}
+}
+
+
