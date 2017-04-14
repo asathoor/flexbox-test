@@ -1,6 +1,8 @@
 # Flexbox-test
 
-Work in progress notes on Flexbox. The markup is inspired by the article about Flexbox in *Web Designer (issue: 259)*.  
+Work in progress notes on Flexbox. The markup is inspired by the article about Flexbox in *Web Designer (issue: 259)*. Here's a demo on Github:
+
+* [Flexbox Test](https://asathoor.github.io/flexbox-test/)  
 
 ## Read on
 
